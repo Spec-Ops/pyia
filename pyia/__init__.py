@@ -24,10 +24,12 @@ Free Software Foundation, Inc., 59 Temple Place - Suite 330,
 Boston, MA 02111-1307, USA.
 '''
 
-__version__ = "0.0.2"
+__version__ = "0.0.3"
 from comtypes.client import GetModule
 GetModule('oleacc.dll')
 from comtypes.gen.Accessibility import IAccessible
+GetModule(r'ia2_api_all.tlb')
+from comtypes.gen.IAccessible2Lib import IAccessible2
 del GetModule
 import accessible
 from utils import *
